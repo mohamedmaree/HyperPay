@@ -13,6 +13,7 @@ php artisan vendor:publish --provider="maree\hyperPay\HyperPayServiceProvider" -
 ```
 then change your hyperPay config from config/hyperPay.php file
 ```php
+	
 	"mode" => "test" , // test||live
     "token" =>  "",
     "entityIds" => [
@@ -28,14 +29,14 @@ then change your hyperPay config from config/hyperPay.php file
 ## first step
 ```php
 namespace maree\hyperPay;
-$customerInfo = ['email' => 'maree@site.com' , 'country' => 'EG' , 'givenName' => 'mohamed maree' ,'surname' => 'mohamed maree' , 'street1' => '23 elmagd' ,'city' => 'almehalla' ,'state' => 'gharbia' , 'postcode' => '1234'];
+$customerInfo = ['email' => 'm7mdmaree26@gmail.com' , 'country' => 'EG' , 'givenName' => 'mohamed maree' ,'surname' => 'mohamed maree' , 'street1' => '23 elmagd' ,'city' => 'almehalla' ,'state' => 'gharbia' , 'postcode' => '1234'];
 $brand = 'VISA MASTER'; //you can use 'VISA MASTER' or 'STC_PAY' or 'MADA' or 'APPLEPAY' or 'AMEX'
 HyperPay::checkout($amount = 1.0 ,$brand, $customerInfo);  
 
 ```
 ## note 
 - use 'VISA MASTER' as one brand or key not two different brands or keys
-- this function response ['checkoutId' => $checkoutId , 'responseData' => $responseData]
+- this function return ['checkoutId' => $checkoutId , 'responseData' => $responseData]
 - use checkoutId to save transaction in database
 - use checkoutId in view page in next step
 
