@@ -1,0 +1,26 @@
+{
+    "name": "maree/hyper-pay",
+    "description": "package to pay with hyper pay payment gateway",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mohamed maree",
+            "email": "m7mdmaree26@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "maree\\hyperPay\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "maree\\hyperPay\\HyperPayServiceProvider"
+            ]
+        }
+    }        
+}
