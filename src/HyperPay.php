@@ -14,11 +14,11 @@ class HyperPay {
                $curlopt     = false;
                $testMode    = "&testMode=EXTERNAL";
             }
-            $entityId = config('entityIds.'.$brand);
+            $entityId = config('hyperPay.entityIds.'.$brand);
             $amount = number_format((float)$amount, 2, '.', '');
             $data = "entityId=".$entityId.
                 "&amount=".$amount.
-                "&currency=".config('hyperPay.currency')
+                "&currency=".config('hyperPay.currency').
                 "&merchantTransactionId=".rand(1111111,9999999).
                 "&customer.email=".$customerInfo['email'].
                 "&paymentType=DB".
@@ -59,7 +59,7 @@ class HyperPay {
            $curlopt     = false;
         }
         $response_url .= $transactionid;
-        $response_url .= "?entityId=".config('entityIds.'.$brand);;
+        $response_url .= "?entityId=".config('hyperPay.entityIds.'.$brand);;
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $response_url);

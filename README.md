@@ -99,8 +99,8 @@ EX: Route::get('show-response-route', 'PaymentsController@paymentresponse')->nam
 ## inside 'paymentresponse' function use:
 ```php
 use maree\hyperPay\HyperPay;
-//$brand = VISA MASTER || STC_PAY || MADA || APPLEPAY || AMEX
-// $transactionid = $checkoutId || $request->resourcePath;
+//$brand = 'VISA MASTER';// || STC_PAY || MADA || APPLEPAY || AMEX
+// $transactionid = $request->resourcePath;
 $response = HyperPay::checkoutResponseStatus($transactionid,$brand);  
 
 ```
