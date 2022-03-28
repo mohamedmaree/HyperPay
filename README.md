@@ -28,7 +28,7 @@ then change your hyperPay config from config/hyperPay.php file
 
 ## first step
 ```php
-namespace maree\hyperPay;
+use maree\hyperPay;
 $customerInfo = ['email' => 'm7mdmaree26@gmail.com' , 'country' => 'EG' , 'givenName' => 'mohamed maree' ,'surname' => 'mohamed maree' , 'street1' => '23 elmagd' ,'city' => 'almehalla' ,'state' => 'gharbia' , 'postcode' => '1234'];
 $brand = 'VISA MASTER'; //you can use 'VISA MASTER' or 'STC_PAY' or 'MADA' or 'APPLEPAY' or 'AMEX'
 HyperPay::checkout($amount = 1.0 ,$brand, $customerInfo);  
@@ -98,7 +98,7 @@ EX: Route::get('show-response-route', 'PaymentsController@paymentresponse')->nam
 
 ## inside 'paymentresponse' function use:
 ```php
-namespace maree\hyperPay;
+use maree\hyperPay;
 //$brand = VISA MASTER || STC_PAY || MADA || APPLEPAY || AMEX
 // $transactionid = $checkoutId || $request->resourcePath;
 $response = HyperPay::checkoutResponseStatus($transactionid,$brand);  
