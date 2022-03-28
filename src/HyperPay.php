@@ -16,7 +16,7 @@ class HyperPay {
             }
             $entityId = config('entityIds.'.$brand);
             $amount = number_format((float)$amount, 2, '.', '');
-            $data = "entityId=".$entityId
+            $data = "entityId=".$entityId.
                 "&amount=".$amount.
                 "&currency=".config('hyperPay.currency')
                 "&merchantTransactionId=".rand(1111111,9999999).
