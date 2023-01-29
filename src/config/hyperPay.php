@@ -65,5 +65,7 @@ return [
     'view_test_url' => 'https://test.oppwa.com/v1/paymentWidgets.js?checkoutId=',
     'view_live_url' => 'https://oppwa.com/v1/paymentWidgets.js?checkoutId=',
 
+    'direct_checkout_test_url' => 'https://eu-test.oppwa.com/v1/payments',
+    'direct_checkout_live_url' => 'https://oppwa.com/v1/payments',
 
 ];
